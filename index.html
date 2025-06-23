@@ -32,33 +32,36 @@
       top: 4vh;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 5.5vw;
+      font-size: 11vw; /* 글자 크기 2배 */
       font-weight: bold;
       color: #003366;
       text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
-      white-space: nowrap;
+      line-height: 1.2;
+      text-align: center;
+      white-space: normal; /* 줄바꿈 허용 */
     }
 
     #counter {
       position: absolute;
-      top: 13vh;
+      top: 18vh;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 2vw;
-      align-items: flex-end;
+      flex-direction: column; /* 위아래 정렬 */
+      align-items: center;
+      gap: 1vh;
       animation: pulse 1s infinite ease-in-out;
     }
 
     #counter .days {
-      font-size: 11vw;
+      font-size: 14vw;
       font-weight: 900;
       color: #ff3b3b;
       text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
     }
 
     #counter .time {
-      font-size: 5.5vw;
+      font-size: 7vw;
       font-weight: bold;
       color: #00cc66;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
@@ -98,7 +101,9 @@
   </style>
 </head>
 <body>
-  <div class="title">제106회 부산 전국체육대회</div>
+  <div class="title">
+    제106회 부산<br>전국체육대회 성공개최 기원
+  </div>
 
   <div id="counter">
     <div class="days">D-000</div>
